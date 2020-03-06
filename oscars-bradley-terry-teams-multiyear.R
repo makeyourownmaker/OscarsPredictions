@@ -12,7 +12,7 @@ inv_logit <- function(u) 1 / (1 + exp(-u))
 center <- function(u) u - sum(u) / length(u)
 
 
-oscars <- read.table("oscars.csv", header = TRUE, sep = ",")
+oscars <- read.table("data/oscars.csv", header = TRUE, sep = ",")
 
 
 years <- seq(2006, 1987)
@@ -111,4 +111,5 @@ team_bayes_fit_plot <-
 team_bayes_fit_plot
 # R^2 correlation does not look great 
 # but it's clearly a y = x line of best fit
+
 
