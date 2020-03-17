@@ -66,6 +66,8 @@ The BT model can be expanded by pairing the likelihood with a prior
 to produce a Bayesian model which allows inference for future competitions.
 A paired-comparison model is an obvious choice for the Oscars competition.
 I am not aware of anyone who has used the BT model to predict the Oscars.
+More thought may be required for the Best Picture award given
+the increase in nominees.
 
 One potential disadvantage of BT models is they do not permit draws.
 This does not affect Oscar rankings where do not want, and should
@@ -94,7 +96,7 @@ who is using a Bayesian
 multinomial model to predict Oscar winners for the 4 main categories.
 The data set runs from 1928 to 2006.
 
-Immediately relevant predictors for the Best director category include:
+Immediately relevant predictors for the Best Director category include:
 
 | Explanatory Variable | Description                          |
 |----------------------|--------------------------------------|
@@ -130,6 +132,7 @@ increased presently.
     * See [Oscarmetrics by Ben Zauzmer](http://www.bearmanormedia.com/oscarmetrics-hardcover-edition-by-ben-zauzmer)
   * Expand to other categories: 
     * Best Picture, Best Male actor and Best Female actress
+      * More thought may be required for the Best Picture award given the increase in nominees
 * Update data
   * The number of best picture nominations expanded from 5 to 8, 9 or 10 in 2009
 * Improve documentation
