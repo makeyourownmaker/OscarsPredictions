@@ -94,16 +94,16 @@ Data used come from [Iain Pardoe](https://iainpardoe.com/oscars/)
 who is using a Bayesian
 [discrete choice](https://en.wikipedia.org/wiki/Discrete_choice)
 multinomial model to predict Oscar winners for the 4 main categories.
-The data set runs from 1928 to 2006.
+The data set runs from 1938 to 2006.
 
 Immediately relevant predictors for the Best Director category include:
 
-| Explanatory Variable | Description                          |
-|----------------------|--------------------------------------|
-| DPrN                 | Total previous directing nominations |
-| DP                   | Picture Oscar nomination             |
-| Gd                   | Golden globe director winer          |
-| DGA                  | Directors guild award winner         |
+| Explanatory Variable | Description                          | Data Availability |
+|----------------------|--------------------------------------|-------------------|
+| DPrN                 | Total previous directing nominations | 1939-2006         |
+| DP                   | Picture Oscar nomination             | 1944-2006         |
+| Gd                   | Golden globe director winer          | 1943-2006         |
+| DGA                  | Directors guild award winner         | 1951-2006         |
 
 These variables are centered and scaled to mean 0 and standard deviation 1.
 There are currently no missing data.
@@ -154,7 +154,7 @@ Data updates are especially welcome.
 ## Alternatives
 
 * [Model, peer reviewed article and data from Iain Pardoe](https://iainpardoe.com/oscars/)
-  * Discrete choice multinomial model based on data going back to 1928
+  * Discrete choice multinomial model based on data going back to 1938
 * Multiple models from 538
   * [Election-style Oscars predictions](https://fivethirtyeight.com/features/oscar-predictions-election-style/)
     * Aggregating guild and press awards (similar approach to his election poll work)
