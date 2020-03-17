@@ -64,14 +64,16 @@ probability that a competition will lead to a win or loss for either
 competitor.
 The BT model can be expanded by pairing the likelihood with a prior
 to produce a Bayesian model which allows inference for future competitions.
+A paired-comparison model is an obvious choice for the Oscars competition.
+I am not aware of anyone who has used the BT model to predict the Oscars.
 
 One potential disadvantage of BT models is they do not permit draws.
 This does not affect Oscar rankings where do not want, and should
 not have, draws.
 
 Here I present a BT model for "team"-based competitions where teams consist of
-multiple "players", where teams are nominees and players are variables.  Each
-player has an ability and the team's ability is
+multiple "players", where teams are nominees and players are explanatory
+variables.  Each player has an ability and the team's ability is
 assumed to be additive on the log odds scale.  Interaction effects are
 ignored for now.  Both player and team rankings can be estimated using
 [stan](https://mc-stan.org/).
@@ -87,23 +89,33 @@ A number of alternative models are briefly summarised in the
 ### Data
 
 Data used come from [Iain Pardoe](https://iainpardoe.com/oscars/)
-who is using a [discrete choice](https://en.wikipedia.org/wiki/Discrete_choice)
+who is using a Bayesian
+[discrete choice](https://en.wikipedia.org/wiki/Discrete_choice)
 multinomial model to predict Oscar winners for the 4 main categories.
+The data set runs from 1928 to 2006.
 
-Immediately relevant variables for the Best director category include:
+Immediately relevant predictors for the Best director category include:
 
-| Variable | Description                          |
-|----------|--------------------------------------|
-| DPrN     | Total previous directing nominations |
-| DP       | Picture Oscar nomination             |
-| Gd       | Golden globe director winer          |
-| DGA      | Directors guild award winner         |
+| Explanatory Variable | Description                          |
+|----------------------|--------------------------------------|
+| DPrN                 | Total previous directing nominations |
+| DP                   | Picture Oscar nomination             |
+| Gd                   | Golden globe director winer          |
+| DGA                  | Directors guild award winner         |
 
 These variables are centered and scaled to mean 0 and standard deviation 1.
+There are currently no missing data.
+Additional variables can be added later on.
 
-Initially only 10 years of data were considered.  Runtime is short, but
-not negligible, so the number of years of data included will be increased
-presently.
+The binary response variable is the same across all Oscars categories:
+
+| Response Variable | Description           |
+|-------------------|-----------------------|
+| y                 | 1 for win, 0 for loss |
+
+Initially only 10 years (1996 to 2006) of data were considered.  Runtime is
+short, but not negligible, so the number of years of data included will be
+increased presently.
 
 ## Roadmap
 
@@ -116,13 +128,17 @@ presently.
     * Such as Golden Globe genre (drama, comedy, musical etc) nominations/wins
     * Consider interactions between variables
     * See [Oscarmetrics by Ben Zauzmer](http://www.bearmanormedia.com/oscarmetrics-hardcover-edition-by-ben-zauzmer)
-  * Expand to other categories: Best Picture, Best Male actor and Best Female actress
+  * Expand to other categories: 
+    * Best Picture, Best Male actor and Best Female actress
 * Update data
   * The number of best picture nominations expanded from 5 to 8, 9 or 10 in 2009
 * Improve documentation
+  * Include some data set summary graphs
   * Expand the model description
     * Describe prior on player abilities
     * Describe hierarchal nature of model
+    * Describe predictor selection
+    * Describe validation approach
 * [Learning to rank](https://en.wikipedia.org/wiki/Learning_to_rank)
   models are interesting in their own right so deserve a separate repository
 
