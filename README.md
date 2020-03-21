@@ -38,16 +38,18 @@ source("oscars-bradley-terry-teams-multiyear.R", echo = TRUE)
 
 ### Oscars
 
-The Oscars are difficult to predict.  It's an annual event with a changing
+Oscar nominees are difficult to rank.  The Oscars are an annual event with a changing
 electorate and frequent rule changes which do not apply uniformly to all
-award categories.  For most of the history of the Oscars there have been
+award categories.  For example, during most of the history of the Oscars there have been
 five nominations in each category.  Starting in 2009 the Academy of
 Motion Picture Arts and Sciences expanded the nominations for best picture
 to more than 5 films (but so far less than 10).  The best picture prize
 uses [instant runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting)
 instead of
 [first past the post](https://en.wikipedia.org/wiki/First-past-the-post_voting)
-which is used for the other categories.
+which is used for the other categories.  A winner is announced for each
+Occar category but no other information is explicitly provided for ranking, i.e.
+no 2nd or 3rd place medals and no runners-up.
 
 I'm not aware of anybody polling the greater than 5,000 academy members
 eligible to vote; or anyone investigating the amounts studios spend on
@@ -115,7 +117,7 @@ The binary response variable is the same across all Oscars categories:
 |-------------------|-----------------------|
 | y                 | 1 for win, 0 for loss |
 
-Initially only 10 years (1996 to 2006) of data were considered.  Runtime is
+Initially only 20 years (1987 to 2006) of data were considered.  Runtime is
 short, but not negligible, so the number of years of data included will be
 increased presently.
 
