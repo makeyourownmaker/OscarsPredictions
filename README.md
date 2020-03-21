@@ -117,6 +117,8 @@ The binary response variable is the same across all Oscars categories:
 |-------------------|-----------------------|
 | y                 | 1 for win, 0 for loss |
 
+The response variable is zero-inflated.
+
 Initially only 20 years (1987 to 2006) of data were considered.  Runtime is
 short, but not negligible, so the number of years of data included will be
 increased presently.
