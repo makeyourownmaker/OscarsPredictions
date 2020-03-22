@@ -123,6 +123,13 @@ Initially only 20 years (1987 to 2006) of data were considered.  Runtime is
 short, but not negligible, so the number of years of data included will be
 increased presently.
 
+### Limitations
+
+Let's ignore the fact that films are vicarious socialising and in the worst cases
+[supernormal stimulators](https://en.wikipedia.org/wiki/Supernormal_stimulus).
+The real entertainment is building the model.
+
+
 ## Roadmap
 
 * NEXT
